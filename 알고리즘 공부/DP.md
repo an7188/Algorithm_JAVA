@@ -162,6 +162,10 @@ public class DP2 {
 
 
 
+---
+
+
+
 
 
 #### ⬛️ DP를 이용한 **최장 증가 수열(LIS)**
@@ -221,7 +225,15 @@ public class DP2_LIS_Test {
 
 
 
-#### binarysearch 함수 사용
+#### ◼️ binarysearch (이진 탐색) 함수 사용
+
+> **=> Arrays.binarySearch(이진탐색을 당할 배열, 찾는 값);**
+>
+> 오름차순으로 정렬된 리스트에서 특정한 값의 위치를 찾는 알고리즘
+>
+> 무조건 정렬을 해준 후 비교를 해야 한다.
+
+
 
 ```java
 import java.util.Arrays;
