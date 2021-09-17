@@ -117,4 +117,5 @@ public class Main_1260_DFS_BFS {
 }
 ```
 
-![KakaoTalk_Photo_2021-09-15-16-09-20](/Users/an-yeji/Downloads/KakaoTalk_Photo_2021-09-15-16-09-20.jpeg)
+
+![KakaoTalk_Photo_2021-09-15-16-09-20](https://user-images.githubusercontent.com/89010467/133712821-74e05c8c-304a-49e0-94fa-c2430f3ba873.jpeg)
