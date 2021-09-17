@@ -1,3 +1,5 @@
+
+
 # Dynamic Programming(동적계획법)
 
 
@@ -119,6 +121,8 @@ public class DP1 {
 
 
 
+---
+
 
 
 ##### DP를 이용한 알고리즘
@@ -153,6 +157,145 @@ public class DP2 {
 }
 
 ```
+
+
+
+
+
+---
+
+
+
+
+
+#### ⬛️ DP를 이용한 **최장 증가 수열(LIS)**
+
+**LIS (Longest Increasing Subsequence Algorithm)**
+
+➡️ 최장증가수열 알고리즘으로 증가하는 원소들의 가장 긴 부분집합을 찾는 알고리즘이다.
+
+
+
+
+
+#####  Brute-force 접근 방법
+
+수열의 모든 부분 집합을 구하여 그 부분 집합이 증간 수열인지 판단한다.
+
+증가 수열 중 가장 길이가 긴 값을 구한다.
+
+```java
+import java.util.Scanner;
+
+public class DP2_LIS_Test {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+		int N= sc.nextInt();
+		int [] arr= new int [N];
+		int [] LIS =new int[N]; //각 원소를 끝으로 하는 최장 길이
+		
+		for (int i = 0; i < N; i++) {
+			arr[i]=sc.nextInt();
+		}
+		
+		int max=0; //전체중의 최대 길이
+		for (int i = 0; i < N; i++) {
+			LIS[i]=1;
+			
+			for (int j = 0; j < i; j++) { //j : i의 앞쪽 원소 
+				if (arr[j]<arr[i] && LIS[i]<LIS[j]+1) {
+					LIS[i]=LIS[j]+1;
+				}
+			}//i를 끝으로 하는 최장 길이 값 계산 완
+			if(max<LIS[i]) max=LIS[i];
+		}
+		
+		System.out.println(max);
+		
+	}
+
+}
+
+```
+
+
+
+
+
+#### ◼️ binarysearch (이진 탐색) 함수 사용
+
+> **=> Arrays.binarySearch(이진탐색을 당할 배열, 찾는 값);**
+>
+> 오름차순으로 정렬된 리스트에서 특정한 값의 위치를 찾는 알고리즘
+>
+> 무조건 정렬을 해준 후 비교를 해야 한다.
+
+
+
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class DP_LIS2 {
+
+	public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+		
+		
+		int N= sc.nextInt();
+		int [] arr= new int [N];
+		int [] LIS =new int[N]; //해당 길이를 증가수열 중 맨 끝을 최소값으로 유지 
+		
+		
+		for (int i = 0; i < N; i++) {
+			arr[i]=sc.nextInt();
+		}
+		
+		int size=0; //LIS에 채워진 원소 수 
+		for (int i = 0; i < N; i++) {
+			//중복값이 없으므로 탐색 실패 : 음수 값 ==> 삽입 위치로 환산 
+			
+			int temp =Math.abs(Arrays.binarySearch(LIS, 0,size,arr[i]))-1;
+			
+			LIS[temp]= arr[i];
+			
+			
+			//추가된 위치가 맨 뒤라면 사이즈 증가
+			if (temp ==size ) size++;
+		
+		}
+		
+			System.out.println(size);
+		
+	
+	}
+
+}
+
+```
+
+
+
+
+
+
+
+----
+
+
+
+## 모든 쌍 최단 경로
+
+
+
+#### 플로이드 와샬(Floyd Warshall) 알고리즘
+
+> 모든 정점에서 모든 정점으로의 최단 경로를 구할 경우 사용하는 알고리즘!
+>
+> 거쳐가는 정점을 기준으로 알고리즘을 수행한다
 
 
 
