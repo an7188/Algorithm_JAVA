@@ -14,7 +14,7 @@
 
 ## Beakjoon 문제  현황
 
-<img src="C:\Users\multicampus\Desktop\1_aTuWWHnk0-FeyetCxyNCCg.png" alt="1_aTuWWHnk0-FeyetCxyNCCg" style="zoom:5%; float:left" />   [백준 문제 풀이 현황 보러가기](https://www.notion.so/yeaconding200/f6956a868fc84c74a1492add6e29d4cd?v=90f7f1738b0f40eb95528a9fe52ba199)
+<img src="https://user-images.githubusercontent.com/89010467/155477522-68961f3e-1992-4843-abb6-c1d95faa527f.png" alt="1_aTuWWHnk0-FeyetCxyNCCg" style="zoom:5%; float:left" />   [백준 문제 풀이 현황 보러가기](https://www.notion.so/yeaconding200/d24f3d9fff08443e9c56da5c06b2feca)
 
 
 
